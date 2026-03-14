@@ -13,3 +13,23 @@ HIP does two things.
 First -  it learns YOU. As you chat naturally across any AI tool, it silently builds your identity in the background. Your writing style, your skills, how you think. 
 
 Second - it retrieves YOU. Switch to any other AI platform, connect HCP, and that AI already knows who you are. No re-introductions. Your identity travels with you."
+
+### How to run
+
+## Supabase setup:
+
+ - Go to supabase.com/dashboard → create a project
+ - Open SQL Editor → paste setup.sql → click Run
+ - Go to Project Settings → API → copy the URL and anon key
+ - Create .env with those two values
+
+## Install and run:
+
+```
+bashpip install -r requirements.txt
+python server.py
+```
+
+Test all three tools with curl (commands are in the README). Every fact you store shows up in real-time in the Supabase dashboard table viewer — that's a great visual for the demo.
+
+Connect to a real agent and test the loop. Paste http://localhost:8000/mcp/user1/sse into Claude or Cursor's MCP settings.
